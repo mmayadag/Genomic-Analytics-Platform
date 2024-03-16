@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  mongodb:
+    build: ./api/database/mongodb
+    ports:
+      - ${MONGO_PORT:-27017}:27017
+    env_file:
+      - ./api/.env
+    restart: always
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "'db.runCommand({ ping: 1 })'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  api:
+    build: ./api
+    ports:
+      - ${API_PORT:-8080}:8080
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    env_file:
+      - ./api/.env
+    restart: on-failure
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
