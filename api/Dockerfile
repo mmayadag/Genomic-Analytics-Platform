@@ -14,4 +14,4 @@ RUN npm run build
 
 CMD [ "npm", "run", "start:prod" ]
 
-EXPOSE ${API_PORT}
+EXPOSE 8080
