@@ -4,7 +4,8 @@ import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const appOptions = { cors: true };
+  const app = await NestFactory.create(AppModule, appOptions);
   const configService = app.get(ConfigService);
 
   const openApiConfig = new DocumentBuilder()
@@ -14,12 +15,11 @@ async function bootstrap() {
     )
     .setVersion('1.0')
     .addTag('genomics', 'Retrieve and analyze genomic data')
-    .addTag('bioinformatics', 'Explore gene expression and omics trends')
     .build();
   const document = SwaggerModule.createDocument(app, openApiConfig);
 
   SwaggerModule.setup('api', app, document);
-  const port = configService.get('API_PORT') || 3000;
+  const port = configService.get('API_PORT') || 4000;
 
   await app.listen(port);
 }
