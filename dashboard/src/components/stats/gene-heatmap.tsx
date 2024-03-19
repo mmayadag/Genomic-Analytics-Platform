@@ -25,7 +25,7 @@ const MyResponsiveHeatMap: FC<MyResponsiveHeatMapProps> = ({ data }) => {
   return (
     <div style={{ height: 400, width: 400 }}>
       <ResponsiveHeatMap
-        data={data2}
+        data={data}
         margin={{ top: 60, right: 90, bottom: 60, left: 90 }}
         valueFormat=" >-.2s"
         enableGridX={true}
