@@ -14,3 +14,4 @@ export const geneAnalyticsTableResultsIsLoadingAtom = atom<boolean>(false);
 
 export const geneAnalyzeSelectionAtom = atom<GeneDataResult | null>(null);
 export const geneStatsAtom = atom<GeneStats | null>(null);
+
