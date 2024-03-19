@@ -55,6 +55,15 @@ pnpm run build
 ## API url
 Open 👉 http://localhost:3000 with your browser to see the result.
 
+## ScreenShots
+![Screenshot](./docs/1.png)
+![Screenshot](./docs/2.png)
+![Screenshot](./docs/3.png)
+![Screenshot](./docs/4.png)
+![Screenshot](./docs/5.png)
+![Screenshot](./docs/6.png)
+
+
 ## License
 
 Nest is [MIT licensed](LICENSE).
