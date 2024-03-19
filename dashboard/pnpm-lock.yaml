@@ -44,9 +44,6 @@ dependencies:
   '@radix-ui/react-toast':
     specifier: ^1.1.5
     version: 1.1.5(@types/react-dom@18.2.22)(@types/react@18.2.66)(react-dom@18.2.0)(react@18.2.0)
-  '@syncfusion/ej2-react-heatmap':
-    specifier: ^25.1.35
-    version: 25.1.35
   '@tanstack/react-table':
     specifier: ^8.13.2
     version: 8.13.2(react-dom@18.2.0)(react@18.2.0)
@@ -1346,70 +1343,6 @@ packages:
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
     dependencies:
       tslib: 2.6.2
-    dev: false
-
-  /@syncfusion/ej2-base@25.1.35:
-    resolution: {integrity: sha512-eH/zLft7j5jhbNquVNcKoDmlx+ZU/77mHAJwpG9Ad4+C/+7UcWlIi/RDORJ0QreosZM4gMyCYzxDAZ5QOI3txw==}
-    hasBin: true
-    dependencies:
-      '@syncfusion/ej2-icons': 25.1.35
-    dev: false
-
-  /@syncfusion/ej2-compression@25.1.35:
-    resolution: {integrity: sha512-x9q6l9BOkM1fowejGUuKWK2sYFgZH5HPoVUwPpFXKXFvbJgzzVCAng+7Yojz5DIK7dfrR4KCLvp9jjqCVqZ5/Q==}
-    dependencies:
-      '@syncfusion/ej2-file-utils': 25.1.35
-    dev: false
-
-  /@syncfusion/ej2-data@25.1.35:
-    resolution: {integrity: sha512-eHWkoQcokKFiLUMpcw2IM1ul9v8HeRgIrUzowyWPpamuZASX8luczDy3VLR5AX0YeiE9aNv3QKsr04t4F1GRcQ==}
-    dependencies:
-      '@syncfusion/ej2-base': 25.1.35
-    dev: false
-
-  /@syncfusion/ej2-file-utils@25.1.35:
-    resolution: {integrity: sha512-nBkZXnGtBt5MFpTkJdvvEKS65HGLa5UM1pQq34K/Cdx4YPlxzStQkVo4RyamXqwtadhLqmpKc9zGolHvUw7KvA==}
-    dev: false
-
-  /@syncfusion/ej2-heatmap@25.1.35:
-    resolution: {integrity: sha512-e5E0yXgLQ9gu4fkRUlOLCiXNvN+bzfkEA8HodvEOEsJKRr/sGtPGQP6bTXtIwqPi03CXUisDu3AU5JH+HXcyUA==}
-    dependencies:
-      '@syncfusion/ej2-base': 25.1.35
-      '@syncfusion/ej2-compression': 25.1.35
-      '@syncfusion/ej2-data': 25.1.35
-      '@syncfusion/ej2-file-utils': 25.1.35
-      '@syncfusion/ej2-pdf-export': 25.1.35
-      '@syncfusion/ej2-svg-base': 25.1.35
-    dev: false
-
-  /@syncfusion/ej2-icons@25.1.35:
-    resolution: {integrity: sha512-E8ypbeB9ISTsaj8Q29w3Ysh6HG35GOdTjfaU6JTCaZ9wP30q04B4WfN9lqcd42Q198qhynFAXd3lJyYev68aGw==}
-    dev: false
-
-  /@syncfusion/ej2-pdf-export@25.1.35:
-    resolution: {integrity: sha512-1Nt42y2n0/ExDfx93eV5aGJipU9rrJzvFa7xfRqtGObldll5S7yBpMKU6NDEoioeW+woOib4ea9+8vBtkQ+DnQ==}
-    dependencies:
-      '@syncfusion/ej2-compression': 25.1.35
-    dev: false
-
-  /@syncfusion/ej2-react-base@25.1.35:
-    resolution: {integrity: sha512-chjK/THRwbRcQTKUL7NyP2VBjtS65uw6e0kieTsQvJ37c3ZZZ3/FpHt9jcqJisStrZ/xp4/y9uSPe6kqBGQBCg==}
-    dependencies:
-      '@syncfusion/ej2-base': 25.1.35
-    dev: false
-
-  /@syncfusion/ej2-react-heatmap@25.1.35:
-    resolution: {integrity: sha512-GhBPEPo0lTc0m/qTuKFwf6h0I2mPs/KORPzv11w6iVng7Jhn5jdZuyOVERs1nnzIZak42avPgKmZZ+QfX0geLQ==}
-    dependencies:
-      '@syncfusion/ej2-base': 25.1.35
-      '@syncfusion/ej2-heatmap': 25.1.35
-      '@syncfusion/ej2-react-base': 25.1.35
-    dev: false
-
-  /@syncfusion/ej2-svg-base@25.1.35:
-    resolution: {integrity: sha512-1mmNAQMKo7TRaxUmbgBaEE0AIdkgONcSJMOv6YTwrXPv6p/mxhzj++1DYPz4q499Y6RX2kbv8pXIOypmO2+FFQ==}
-    dependencies:
-      '@syncfusion/ej2-base': 25.1.35
     dev: false
 
   /@tanstack/react-table@8.13.2(react-dom@18.2.0)(react@18.2.0):
