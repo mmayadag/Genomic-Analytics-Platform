@@ -18,11 +18,11 @@ GenomicAnalyticsPlatform: A robust tool for omics data retrieval, analysis, and 
 |----------|----------|
 | ![Swagger](./api/docs/api-docs.png) | ![LightMode](./dashboard/docs/images/light/3.png)  Light Mode|
 | | ![DarkMode](./dashboard/docs/images/dark/4.png) Dark Mode|
-|![Screenshot](./dashboard/docs/images/light-mobile/3.png)
 
-| [Mobile-Dashboard](dashboard/Readme.md) | |
+
+| [Mobile-Dashboard](dashboard/Readme.md) |  [Mobile-Dashboard](dashboard/Readme.md) |
 |----------|----------|
-| ![Mobile view](./dashboard/docs/images/light-mobile/3.png)| ![MobileScreen](./dashboard/docs/images/dark-mobile/3.png)|
+| ![Screenshot](./dashboard/docs/images/light-mobile/3.png)| ![MobileScreen](./dashboard/docs/images/dark-mobile/3.png)|
 
 
 ## How To Use It
