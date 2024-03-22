@@ -14,6 +14,17 @@ GenomicAnalyticsPlatform: A robust tool for omics data retrieval, analysis, and 
 - **[MongoDB Data Insert](data/mongodb-data-insert/Readme.md)**: Includes instructions on how to insert data into MongoDB for further analysis.
 - **[Anomaly Detector Trainer](data/anomaly-detector-trainer/Readme.md)**: Describes the anomaly detector trainer module, which helps in training models to detect anomalies in genomic data.
 
+| [API](api/Readme.md) | [Dashboard](dashboard/Readme.md) |
+|----------|----------|
+| ![Swagger](./api/docs/api-docs.png) | ![LightMode](./dashboard/docs/images/light/3.png)  Light Mode|
+| | ![DarkMode](./dashboard/docs/images/dark/4.png) Dark Mode|
+|![Screenshot](./dashboard/docs/images/light-mobile/3.png)
+
+| [Mobile-Dashboard](dashboard/Readme.md) | |
+|----------|----------|
+| ![Mobile view](./dashboard/docs/images/light-mobile/3.png)| ![MobileScreen](./dashboard/docs/images/dark-mobile/3.png)|
+
+
 ## How To Use It
 
 Install docker ***desktop*** or ***orbstack***
