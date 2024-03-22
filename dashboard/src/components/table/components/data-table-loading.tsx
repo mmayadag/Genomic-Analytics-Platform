@@ -1,5 +1,5 @@
-import { Skeleton } from "@/components/ui/skeleton"
-import { FC } from "react"
+import { Skeleton } from "@/components/ui/skeleton";
+import { FC } from "react";
 
 const DataTableLoading: FC = () => {
   return (
@@ -10,6 +10,6 @@ const DataTableLoading: FC = () => {
         <Skeleton className="h-4 w-[200px]" />
       </div>
     </div>
-  )
-}
+  );
+};
 export { DataTableLoading };

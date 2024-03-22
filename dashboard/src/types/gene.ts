@@ -1,11 +1,10 @@
-
 export type GeneDataOption = {
-  _id: string
-  gene: string
-  icon?: React.ComponentType<{ className?: string }>
-}
+  _id: string;
+  gene: string;
+  icon?: React.ComponentType<{ className?: string }>;
+};
 
-export type GeneDataList = GeneDataOption[]
+export type GeneDataList = GeneDataOption[];
 
 export type GeneStats = {
   gene: string;
@@ -25,5 +24,5 @@ export type GeneDataResult = {
   exper_rep2: number;
   exper_rep3: number;
   gene: string;
-}
-export type GeneDataTableType = GeneDataResult[]
+};
+export type GeneDataTableType = GeneDataResult[];

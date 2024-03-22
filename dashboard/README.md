@@ -1,6 +1,7 @@
 # Genomic-Analytics-Dashboard
 
 ## Introduction
+
 A brief introduction to your project. Describe the purpose and functionality of your application.
 
 ## Technology Stack
@@ -29,40 +30,45 @@ pnpm install
 ```
 
 ### update api url in .env
+
 ```bash
 cp .env.example .env
 ```
-| Variable   | Value                                                    |
-|------------|----------------------------------------------------------|
-| NEXT_PUBLIC_API_URL  | http://localhost:3000/ |
 
+| Variable            | Value                  |
+| ------------------- | ---------------------- |
+| NEXT_PUBLIC_API_URL | http://localhost:3000/ |
 
 # Run the application in development mode
+
 ```bash
 pnpm run dev
 ```
 
 # Run the application
+
 ```bash
 pnpm run start
 ```
 
 # Build for production
+
 ```bash
 pnpm run build
 ```
 
 ## API url
+
 Open 👉 http://localhost:3000 with your browser to see the result.
 
 ## ScreenShots
+
 ![Screenshot](./docs/1.png)
 ![Screenshot](./docs/2.png)
 ![Screenshot](./docs/3.png)
 ![Screenshot](./docs/4.png)
 ![Screenshot](./docs/5.png)
 ![Screenshot](./docs/6.png)
-
 
 ## License
 

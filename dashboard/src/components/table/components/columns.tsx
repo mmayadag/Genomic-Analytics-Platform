@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { ColumnDef } from "@tanstack/react-table"
+import { ColumnDef } from "@tanstack/react-table";
 
-import { Checkbox } from "@/components/ui/checkbox"
+import { Checkbox } from "@/components/ui/checkbox";
 
-import { Task } from "../data/schema"
-import { DataTableColumnHeader } from "./data-table-column-header"
-import { Button } from "@/components/ui/button"
-import { getGeneStats } from "@/services/gene.service"
+import { Task } from "../data/schema";
+import { DataTableColumnHeader } from "./data-table-column-header";
+import { Button } from "@/components/ui/button";
+import { getGeneStats } from "@/services/gene.service";
 
 export const columns: ColumnDef<Task>[] = [
   {
@@ -48,7 +48,11 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="exper_rep1" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{parseFloat(row.getValue("exper_rep1")).toFixed(2)}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px]">
+        {parseFloat(row.getValue("exper_rep1")).toFixed(2)}
+      </div>
+    ),
     enableSorting: true,
     enableHiding: true,
   },
@@ -57,7 +61,9 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="exper_rep2" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("exper_rep2")}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px]">{row.getValue("exper_rep2")}</div>
+    ),
     enableSorting: true,
     enableHiding: true,
   },
@@ -66,7 +72,9 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="exper_rep3" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("exper_rep3")}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px]">{row.getValue("exper_rep3")}</div>
+    ),
     enableSorting: true,
     enableHiding: true,
   },
@@ -75,7 +83,9 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Control Rep 1" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("control_rep1")}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px]">{row.getValue("control_rep1")}</div>
+    ),
     enableSorting: true,
     enableHiding: true,
   },
@@ -84,7 +94,9 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Control Rep 2" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("control_rep2")}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px]">{row.getValue("control_rep2")}</div>
+    ),
     enableSorting: true,
     enableHiding: true,
   },
@@ -93,7 +105,9 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Control Rep 3" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("control_rep3")}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px]">{row.getValue("control_rep3")}</div>
+    ),
     enableSorting: true,
     enableHiding: true,
   },
@@ -102,7 +116,9 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Data Set" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("dataSet")}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px]">{row.getValue("dataSet")}</div>
+    ),
     enableSorting: true,
     enableHiding: true,
   },
@@ -112,20 +128,30 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Transcript" />
     ),
-    cell: ({ row }) => <div className="w-[80px]">{row.getValue("transcript")}</div>,
+    cell: ({ row }) => (
+      <div className="w-[80px]">{row.getValue("transcript")}</div>
+    ),
     enableSorting: true,
     enableHiding: true,
   },
   {
     id: "analyze",
-    cell: ({ row }) => <Button onClick={async () => {
-      const gene: string = row.getValue("gene");
-      const geneStats = await getGeneStats(gene);
-    }}>Analyze</Button>,
+    cell: ({ row }) => (
+      <Button
+        onClick={async () => {
+          const gene: string = row.getValue("gene");
+          const geneStats = await getGeneStats(gene);
+        }}
+      >
+        Analyze
+      </Button>
+    ),
   },
-]
+];
 
-export const columnsWithAnalysis: (analyzeHandler: (row: any) => void) => ColumnDef<Task>[] = (analyzeHandler) => {
+export const columnsWithAnalysis: (
+  analyzeHandler: (row: any) => void,
+) => ColumnDef<Task>[] = (analyzeHandler) => {
   return [
     {
       id: "select",
@@ -163,27 +189,35 @@ export const columnsWithAnalysis: (analyzeHandler: (row: any) => void) => Column
     {
       accessorKey: "exper_rep1",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="exper_rep1" />
+        <DataTableColumnHeader column={column} title="Exper Rep 1" />
       ),
-      cell: ({ row }) => <div className="w-[80px]">{parseFloat(row.getValue("exper_rep1")).toFixed(2)}</div>,
+      cell: ({ row }) => (
+        <div className="w-[80px]">
+          {parseFloat(row.getValue("exper_rep1")).toFixed(2)}
+        </div>
+      ),
       enableSorting: true,
       enableHiding: true,
     },
     {
       accessorKey: "exper_rep2",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="exper_rep2" />
+        <DataTableColumnHeader column={column} title="Exper Rep 2" />
       ),
-      cell: ({ row }) => <div className="w-[80px]">{row.getValue("exper_rep2")}</div>,
+      cell: ({ row }) => (
+        <div className="w-[80px]">{row.getValue("exper_rep2")}</div>
+      ),
       enableSorting: true,
       enableHiding: true,
     },
     {
       accessorKey: "exper_rep3",
       header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="exper_rep3" />
+        <DataTableColumnHeader column={column} title="Exper Rep 3" />
       ),
-      cell: ({ row }) => <div className="w-[80px]">{row.getValue("exper_rep3")}</div>,
+      cell: ({ row }) => (
+        <div className="w-[80px]">{row.getValue("exper_rep3")}</div>
+      ),
       enableSorting: true,
       enableHiding: true,
     },
@@ -192,7 +226,9 @@ export const columnsWithAnalysis: (analyzeHandler: (row: any) => void) => Column
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Control Rep 1" />
       ),
-      cell: ({ row }) => <div className="w-[80px]">{row.getValue("control_rep1")}</div>,
+      cell: ({ row }) => (
+        <div className="w-[80px]">{row.getValue("control_rep1")}</div>
+      ),
       enableSorting: true,
       enableHiding: true,
     },
@@ -201,7 +237,9 @@ export const columnsWithAnalysis: (analyzeHandler: (row: any) => void) => Column
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Control Rep 2" />
       ),
-      cell: ({ row }) => <div className="w-[80px]">{row.getValue("control_rep2")}</div>,
+      cell: ({ row }) => (
+        <div className="w-[80px]">{row.getValue("control_rep2")}</div>
+      ),
       enableSorting: true,
       enableHiding: true,
     },
@@ -210,7 +248,9 @@ export const columnsWithAnalysis: (analyzeHandler: (row: any) => void) => Column
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Control Rep 3" />
       ),
-      cell: ({ row }) => <div className="w-[80px]">{row.getValue("control_rep3")}</div>,
+      cell: ({ row }) => (
+        <div className="w-[80px]">{row.getValue("control_rep3")}</div>
+      ),
       enableSorting: true,
       enableHiding: true,
     },
@@ -219,7 +259,9 @@ export const columnsWithAnalysis: (analyzeHandler: (row: any) => void) => Column
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Data Set" />
       ),
-      cell: ({ row }) => <div className="w-[80px]">{row.getValue("dataSet")}</div>,
+      cell: ({ row }) => (
+        <div className="w-[80px]">{row.getValue("dataSet")}</div>
+      ),
       enableSorting: true,
       enableHiding: true,
     },
@@ -229,15 +271,23 @@ export const columnsWithAnalysis: (analyzeHandler: (row: any) => void) => Column
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Transcript" />
       ),
-      cell: ({ row }) => <div className="w-[80px]">{row.getValue("transcript")}</div>,
+      cell: ({ row }) => (
+        <div className="w-[80px]">{row.getValue("transcript")}</div>
+      ),
       enableSorting: true,
       enableHiding: true,
     },
     {
       id: "analyze",
-      cell: ({ row }) => <Button onClick={() => {
-        analyzeHandler(row);
-      }}>Analyze</Button>,
+      cell: ({ row }) => (
+        <Button
+          onClick={() => {
+            analyzeHandler(row);
+          }}
+        >
+          Analyze
+        </Button>
+      ),
     },
-  ]
-}
+  ];
+};

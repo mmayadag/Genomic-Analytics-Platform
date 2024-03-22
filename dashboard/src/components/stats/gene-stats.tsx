@@ -1,21 +1,20 @@
-'use client'
+"use client";
 
-import React, { useMemo } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-import { useAtom } from 'jotai';
-import { geneStatsAtom } from '@/store/gene-store';
+import { FC, useMemo } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { useAtom } from "jotai";
+import { geneStatsAtom } from "@/store/gene-store";
+import { formatValue } from "@/lib/number-formatter";
 
-
-const GeneStats: React.FC = () => {
-  const [geneStats, setGeneStats] = useAtom(geneStatsAtom)
-  const cards = useMemo(() => {
-
-    if (!geneStats) return []
+const GeneStats: FC = () => {
+  const [geneStatsData] = useAtom(geneStatsAtom);
+  const geneStatCards = useMemo(() => {
+    if (!geneStatsData) return [];
 
     return [
       {
         title: "Gene Name",
-        value: geneStats.gene,
+        value: geneStatsData.gene,
         icon: () => (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +33,7 @@ const GeneStats: React.FC = () => {
       },
       {
         title: "Mean",
-        value: geneStats.mean,
+        value: geneStatsData.mean,
         icon: () => (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +51,7 @@ const GeneStats: React.FC = () => {
       },
       {
         title: "Median",
-        value: geneStats.median,
+        value: geneStatsData.median,
         icon: () => (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +69,7 @@ const GeneStats: React.FC = () => {
       },
       {
         title: "Variance",
-        value: geneStats.variance,
+        value: geneStatsData.variance,
         extra: "+20.1%",
         icon: () => (
           <svg
@@ -87,13 +86,16 @@ const GeneStats: React.FC = () => {
           </svg>
         ),
       },
-    ]
-  }, [geneStats])
+    ];
+  }, [geneStatsData]);
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4 ">
-        {cards.map((card, index) => (
+      <div
+        className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4"
+        id="analyzeSection"
+      >
+        {geneStatCards.map((card, index) => (
           <Card key={index}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
@@ -102,38 +104,18 @@ const GeneStats: React.FC = () => {
               {card.icon && <card.icon />}
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{typeof card.value === 'number' ? card.value.toFixed(5) : card.value}</div>
+              <div className="text-2xl font-bold">
+                {typeof card.value === "number"
+                  ? formatValue(card.value)
+                  : card.value}
+              </div>
               {card.extra && (
-                <p className="text-xs text-muted-foreground">
-                  {card.extra}
-                </p>
+                <p className="text-xs text-muted-foreground">{card.extra}</p>
               )}
             </CardContent>
           </Card>
         ))}
       </div>
-      {/* TODO: remove <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-        <Card className="col-span-4">
-          <CardHeader>
-            <CardTitle>Overview</CardTitle>
-          </CardHeader>
-          <CardContent className="pl-2">
-            <Overview />
-          </CardContent>
-        </Card>
-        <Card className="col-span-3">
-          <CardHeader>
-            <CardTitle>Recent Sales</CardTitle>
-            <CardDescription>
-              You made 265 sales this month.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <RecentSales />
-          </CardContent>
-        </Card>
-      </div>
-      */}
     </>
   );
 };

@@ -1,17 +1,25 @@
-'use client'
-import React, { FC } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Rectangle } from 'recharts';
+"use client";
+import React, { FC } from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  Rectangle,
+} from "recharts";
 
 type HorizontalBarChartProps = {
   data: {
-    name: string,
-    experience: number,
-    control: number
-  }[]
-}
+    name: string;
+    experience: number;
+    control: number;
+  }[];
+};
 
 const HorizontalBarChart: FC<HorizontalBarChartProps> = ({ data }) => {
-
   return (
     <BarChart
       width={500}
@@ -29,10 +37,18 @@ const HorizontalBarChart: FC<HorizontalBarChartProps> = ({ data }) => {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="experience" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
-      <Bar dataKey="control" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
+      <Bar
+        dataKey="experience"
+        fill="#8884d8"
+        activeBar={<Rectangle fill="#AD88C6" stroke="purple" />}
+      />
+      <Bar
+        dataKey="control"
+        fill="#82ca9d"
+        activeBar={<Rectangle fill="#A5DD9B" stroke="green" />}
+      />
     </BarChart>
   );
-}
+};
 
 export default HorizontalBarChart;

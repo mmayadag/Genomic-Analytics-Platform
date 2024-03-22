@@ -1,13 +1,15 @@
-import "@/styles/globals.css"
-import { Metadata, Viewport } from "next"
+import "@/styles/globals.css";
+import { Metadata, Viewport } from "next";
 
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { ThemeProvider } from "@/components/providers"
-import { SiteFooter } from "@/components/site-footer"
-import { SiteHeader } from "@/components/site-header"
-import { ThemeSwitcher } from "@/components/ui/theme-switcher"
-import { Toaster } from "@/components/ui/toaster"
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import {
+  ThemeProvider,
+  SiteFooter,
+  SiteHeader,
+  ThemeSwitcher,
+} from "@/components/layout";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
@@ -16,8 +18,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: [
-  ],
+  keywords: [],
   authors: [
     {
       name: "Murat Mayadağ",
@@ -32,8 +33,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [
-    ],
+    images: [],
   },
   icons: {
     icon: "/favicon.ico",
@@ -41,17 +41,17 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   //manifest: `${siteConfig.url}/site.webmanifest`,
-}
+};
 
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
-}
+};
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -60,9 +60,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <head />
         <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-          )}
+          className={cn("min-h-screen bg-background font-sans antialiased")}
         >
           <ThemeProvider
             attribute="class"
@@ -83,5 +81,5 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </body>
       </html>
     </>
-  )
+  );
 }

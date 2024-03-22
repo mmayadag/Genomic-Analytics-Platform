@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from "react";
+import Link from "next/link";
 
-import { siteConfig } from "@/config/site"
-import { Icons } from "@/components/icons"
+import { siteConfig } from "@/config/site";
+import { Icons } from "@/components/icons";
 
 export function MainNav() {
   return (
@@ -16,5 +16,5 @@ export function MainNav() {
         </span>
       </Link>
     </div>
-  )
+  );
 }

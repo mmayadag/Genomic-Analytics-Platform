@@ -1,5 +1,5 @@
-import { GeneDataList, GeneDataResult, GeneStats } from '@/types/gene';
-import { atom } from 'jotai';
+import { GeneDataList, GeneDataResult, GeneStats } from "@/types/gene";
+import { atom } from "jotai";
 
 export const counterAtom = atom<number>(0);
 

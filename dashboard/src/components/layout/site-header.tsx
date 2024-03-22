@@ -1,11 +1,10 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { GithubIcon } from "lucide-react"
-import { MainNav } from "@/components/main-nav"
-import { MobileNav } from "@/components/mobile-nav"
-import { ModeToggle } from "@/components/ui/mode-toggle"
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { GithubIcon } from "lucide-react";
+import { MainNav, MobileNav } from "./index";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export function SiteHeader() {
   return (
@@ -23,11 +22,7 @@ export function SiteHeader() {
               target="_blank"
               rel="noreferrer"
             >
-              <div
-                className={cn(
-                  "w-9 px-0"
-                )}
-              >
+              <div className={cn("w-9 px-0")}>
                 <GithubIcon className="h-4 w-4" />
                 <span className="sr-only">GitHub</span>
               </div>
@@ -37,5 +32,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }
