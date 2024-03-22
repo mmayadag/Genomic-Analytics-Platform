@@ -1,40 +1,35 @@
 version: '3.8'
 services:
-  mongodb:
+  mongo:
+    container_name: mongo
     build: ./api/database/mongodb
     ports:
-      - ${MONGO_PORT:-27017}:27017
+      - ${MONGO_PORT:-27017}:${MONGO_PORT:-27017}
     env_file:
       - ./api/.env
     restart: always
     networks:
       - backend
-    healthcheck:
-      test: ["CMD", "mongo", "--eval", "'db.runCommand({ ping: 1 })'"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
     volumes:
-    - .data/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    - ./api/database/mongodb/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
 
 
   api:
+    container_name: api
     build: ./api
     ports:
       - ${API_PORT:-8080}:8080
-    depends_on:
-      mongodb:
-        condition: service_healthy
-    env_file:
-      - ./api/.env
-    restart: on-failure
+    environment:
+      - MONGO_URŞ="mongodb://mongo:27017"
+    restart: always
     networks:
       - backend
 
   frontend:
-    build: ./frontend
+    container_name: dashboard
+    build: ./dashboard
     ports:
-      - ${FRONTEND_PORT:-3000}:80
+      - ${FRONTEND_PORT:-3000}:3000
     restart: on-failure
     networks:
       - backend

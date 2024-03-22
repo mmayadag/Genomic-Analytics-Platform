@@ -15,6 +15,8 @@ A brief introduction to your project. Describe the purpose and functionality of 
 - **TypeScript**: Adds static typing to JavaScript for improved code quality and developer experience.
 - **@tanstack/react-table**: A lightweight yet powerful data grid library for React.
 - **Dark Mode and Light Mode**: User-selectable themes to enhance accessibility and user experience.
+- **Debounced** input
+- Service messages covered with **toast**
 
 ## Features
 
@@ -61,14 +63,32 @@ pnpm run build
 
 Open 👉 http://localhost:3000 with your browser to see the result.
 
-## ScreenShots
+## Dashboard Public url
+http://144.24.160.60:3000
 
-![Screenshot](./docs/1.png)
-![Screenshot](./docs/2.png)
-![Screenshot](./docs/3.png)
-![Screenshot](./docs/4.png)
-![Screenshot](./docs/5.png)
-![Screenshot](./docs/6.png)
+## ScreenShots
+Light Mode - Desktop
+![Screenshot](./docs/images/light/1.png)
+![Screenshot](./docs/images/light/2.png)
+![Screenshot](./docs/images/light/3.png)
+![Screenshot](./docs/images/light/4.png)
+
+Dark Mode - Desktop
+![Screenshot](./docs/images/dark/1.png)
+![Screenshot](./docs/images/dark/2.png)
+![Screenshot](./docs/images/dark/3.png)
+![Screenshot](./docs/images/dark/4.png)
+
+
+Light Mode - Mobile
+![Screenshot](./docs/images/light-mobile/1.png)
+![Screenshot](./docs/images/light-mobile/2.png)
+![Screenshot](./docs/images/light-mobile/3.png)
+
+Dark Mode - Mobile
+![Screenshot](./docs/images/dark-mobile/1.png)
+![Screenshot](./docs/images/dark-mobile/2.png)
+![Screenshot](./docs/images/dark-mobile/3.png)
 
 ## License
 
