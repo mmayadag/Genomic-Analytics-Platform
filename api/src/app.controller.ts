@@ -12,7 +12,7 @@ export class AppController {
     status: 200,
     description: 'The getHello has been successfully executed.',
   })
-  getHello(): string {
-    return this.appService.getHello();
+  getHealthCheck(): string {
+    return this.appService.getHealthCheck();
   }
 }

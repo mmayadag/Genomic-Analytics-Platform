@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { GeneService } from './gene.service';
-import { Model } from 'mongoose';
+//import { Model } from 'mongoose';
 import { Gene } from './interfaces/gene.interface';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
@@ -16,8 +16,8 @@ const mockGeneModel = {
 
 describe('GeneService', () => {
   let service: GeneService;
-  let model: Model<Gene>;
-  let configService: ConfigService;
+  //  let model: Model<Gene>;
+  //  let configService: ConfigService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({

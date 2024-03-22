@@ -29,11 +29,11 @@ describe('AppController', () => {
       const expected = 'Hello World!';
 
       // Act
-      const result = appController.getHello();
+      const result = appController.getHealthCheck();
 
       // Assert
       expect(result).toBe(expected);
-      expect(appService.getHello).toHaveBeenCalled();
+      expect(appService.getHealthCheck).toHaveBeenCalled();
     });
   });
 });

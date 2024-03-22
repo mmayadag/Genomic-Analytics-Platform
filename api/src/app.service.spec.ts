@@ -16,9 +16,9 @@ describe('AppService', () => {
     expect(service).toBeDefined();
   });
 
-  describe('getHello', () => {
-    it('should return "Hello World!"', () => {
-      expect(service.getHello()).toBe('Hello World!');
+  describe('getHealthCheck', () => {
+    it('should return "Omics Api is running!"', () => {
+      expect(service.getHealthCheck()).toBe('Omics Api is running!');
     });
   });
 });

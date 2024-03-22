@@ -3,11 +3,12 @@
 </p>
 
 # Genomic-Analytics-API
+
 GenomicAnalyticsPlatform is a powerful tool for genomics research. It provides data retrieval, analysis, and visualization capabilities, with a user-friendly interface and advanced features for gene expression data. The API component of the platform enables seamless integration and access to genomic data for researchers and scientists.
 
 ## Description
-A backend project built using Node.js and Nest.js, designed to provide a scalable and efficient server-side application framework. It utilizes **openapi**, **swc**, **jest**, **pnpm**, and **mongoose** for enhanced functionality and ease of development. This project serves as a TypeScript starter repository for the Nest framework.
 
+A backend project built using Node.js and Nest.js, designed to provide a scalable and efficient server-side application framework. It utilizes **openapi**, **swc**, **jest**, **pnpm**, and **mongoose** for enhanced functionality and ease of development. This project serves as a TypeScript starter repository for the Nest framework.
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript **Backend** repository.
 
@@ -20,13 +21,15 @@ $ pnpm install
 ## 2. Environment
 
 Create new environment from example file
+
 ```bash
 $ cp .env.example .env
 ```
-| Variable   | Value                                                    |
-|------------|----------------------------------------------------------|
-| MONGO_URL  | mongodb://sample:sample@localhost:27017/mydatabase?authSource=admin |
-| API_PORT   | 8080                                                     |
+
+| Variable  | Value                                                               |
+| --------- | ------------------------------------------------------------------- |
+| MONGO_URL | mongodb://sample:sample@localhost:27017/mydatabase?authSource=admin |
+| API_PORT  | 8080                                                                |
 
 Update values
 
@@ -42,14 +45,16 @@ $ pnpm run start:dev
 # production mode
 $ pnpm run start:prod
 ```
+
 ## API url
+
 API Server runs here 👉 http://localhost:8080
 
 ### Swagger
+
 ![Swagger](./docs/api-docs.png)
 
 http://localhost:8080/api
-
 
 ## Test
 

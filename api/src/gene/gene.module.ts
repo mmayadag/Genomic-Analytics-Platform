@@ -9,4 +9,4 @@ import { geneProviders } from './gene.providers';
   controllers: [GeneController],
   providers: [GeneService, ...geneProviders],
 })
-export class GeneModule { }
+export class GeneModule {}
