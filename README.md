@@ -60,7 +60,7 @@ For building the application, run:
 make build
 ```
 
-### Fresh Start
+### Fresh Start
 For a fresh start (rebuild and restart everything), use:
 ```bash
 make fresh-start
